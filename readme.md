@@ -1,66 +1,41 @@
-# Semantic Segmentation example for [Project Showcase Initiative](https://sites.google.com/udacity.com/pytorch-scholarship-facebook/community/project-showcase)
+# Semantic Segmentation using [Digital Retinal Images](http://www.isi.uu.nl/Research/Databases/DRIVE/) for [Project Showcase Initiative](https://sites.google.com/udacity.com/pytorch-scholarship-facebook/community/project-showcase)
 
 ## Model
 
+Results could be compared between two models:
 - [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)
 - [FusionNet: A deep fully residual convolutional neural network for image segmentation in connectomics](https://arxiv.org/abs/1612.05360)
 
-## Requirements
+## Download data
 
-- Pytorch 0.1.12
-- Python 3.5.2
-- wget
+Download DRIVE (Digital Retinal Images for Vessel Extraction) dataset from http://www.isi.uu.nl/Research/Databases/DRIVE/
 
-## Download code
+or you could use your own dataset for training, take a look at [notebook](https://github.com/romran/pytorch-semantic-segmentation/blob/master/prepare_data.ipynb) to prepare images
 
-~~~
-git clone https://github.com/GunhoChoi/Kind_PyTorch_Tutorial.git
-cd Kind_PyTorch_Tutorial/13_Semantic_Segmentation/
-~~~
+## Quick setup (for Windows)
 
-## Download Map data
-
-~~~
-wget https://people.eecs.berkeley.edu/~tinghuiz/projects/pix2pix/datasets/maps.tar.gz
-tar -xzvf maps.tar.gz
-~~~
+- With anaconda create virtual environment `conda create -n myenv python=3.5`
+- Install pytorch `conda install pytorch torchvision -c pytorch `
+- Install all remaining packaged with `pip install -r requirements.txt`
 
 ## Make required directory
 
-~~~
-mkdir model result
-~~~
+`mkdir result` to save predictions
+
+`mkdir model` to save trained model
 
 ## Arguments
 
-~~~
-parser.add_argument("--network",type=str,default="fusionnet",help="choose between fusionnet & unet")
-parser.add_argument("--batch_size",type=int,default=1,help="batch size")
-parser.add_argument("--num_gpu",type=int,default=1,help="number of gpus")
-~~~
+`parser.add_argument("--network",type=str,default="fusionnet",help="choose between fusionnet & unet")`
+`parser.add_argument("--batch_size",type=int,default=1,help="batch size")`
+`parser.add_argument("--num_gpu",type=int,default=1,help="number of gpus")`
 
 ## Train Model
-~~~
-python3 main.py --network unet --batch_size 1 --num_gpu 1
-~~~
 
-## Result
+`python main.py --network unet --batch_size 1 --num_gpu 1`
+ 
+## References 
 
-### U-net 
-
-<img src="./example/original_image_99_0.png" width="100%">
-
-<img src="./example/label_image_99_0.png" width="100%">
-
-<img src="./example/gen_image_99_0.png" width="100%">
-
-Original Image / Label Image / Generated Image
-
-### Fusion-Net
-
-
-<img src="./example/original_image_98_0.png" width="100%">
-
-<img src="./example/label_image_98_0.png" width="100%">
-
-<img src="./example/gen_image_98_0.png" width="100%">
+- The implementation is heavily influenced by [Kind-PyTorch-Tutorial](https://github.com/GunhoChoi/Kind-PyTorch-Tutorial)
+- [DRIVE dataset](http://www.isi.uu.nl/Research/Databases/DRIVE/)  
+- [J.J. Staal, M.D. Abramoff, M. Niemeijer, M.A. Viergever, B. van Ginneken, "Ridge based vessel segmentation in color images of the retina", IEEE Transactions on Medical Imaging, 2004, vol. 23, pp. 501-509.](ttp://www.isi.uu.nl/Research/Databases/DRIVE/id=855.html)
