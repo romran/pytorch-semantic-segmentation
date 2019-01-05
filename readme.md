@@ -21,7 +21,6 @@ or you could use your own dataset for training, take a look at [notebook](https:
 ## Make required directory
 
 `mkdir result` to save predictions
-
 `mkdir model` to save trained model
 
 ## Arguments
@@ -38,4 +37,4 @@ or you could use your own dataset for training, take a look at [notebook](https:
 
 - The implementation is heavily influenced by [Kind-PyTorch-Tutorial](https://github.com/GunhoChoi/Kind-PyTorch-Tutorial)
 - [DRIVE dataset](http://www.isi.uu.nl/Research/Databases/DRIVE/)  
-- [J.J. Staal, M.D. Abramoff, M. Niemeijer, M.A. Viergever, B. van Ginneken, "Ridge based vessel segmentation in color images of the retina", IEEE Transactions on Medical Imaging, 2004, vol. 23, pp. 501-509.](ttp://www.isi.uu.nl/Research/Databases/DRIVE/id=855.html)
+- [J.J. Staal, M.D. Abramoff, M. Niemeijer, M.A. Viergever, B. van Ginneken, "Ridge based vessel segmentation in color images of the retina", IEEE Transactions on Medical Imaging, 2004, vol. 23, pp. 501-509.](http://www.isi.uu.nl/Research/Databases/DRIVE/id=855.html)
