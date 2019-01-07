@@ -1,4 +1,4 @@
-# Semantic Segmentation using [Digital Retinal Images](http://www.isi.uu.nl/Research/Databases/DRIVE/) for [Project Showcase Initiative](https://sites.google.com/udacity.com/pytorch-scholarship-facebook/community/project-showcase)
+# Semantic Segmentation using [Digital Retinal Images](http://www.isi.uu.nl/Research/Databases/DRIVE/) 
 
 ## Model
 
@@ -20,14 +20,14 @@ or you could use your own dataset for training, take a look at [notebook](https:
 
 ## Make required directory
 
-`mkdir result` to save predictions
-`mkdir model` to save trained model
+- `mkdir result` to save predictions
+- `mkdir model` to save trained model
 
 ## Arguments
 
-`parser.add_argument("--network",type=str,default="fusionnet",help="choose between fusionnet & unet")`
-`parser.add_argument("--batch_size",type=int,default=1,help="batch size")`
-`parser.add_argument("--num_gpu",type=int,default=1,help="number of gpus")`
+- `parser.add_argument("--network",type=str,default="fusionnet",help="choose between fusionnet & unet")`
+- `parser.add_argument("--batch_size",type=int,default=1,help="batch size")`
+- `parser.add_argument("--num_gpu",type=int,default=1,help="number of gpus")`
 
 ## Train Model
 
