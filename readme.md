@@ -25,9 +25,9 @@ or you could use your own dataset for training, take a look at [notebook](https:
 
 ## Arguments
 
-- `--network, type=str, default="fusionnet", help="choose between fusionnet or unet"`
-- `--batch_size, type=int, default=1, help="batch size"`
-- `--num_gpu, type=int, default=1, help="number of gpus"`
+- `--network, default="fusionnet", help="choose between fusionnet or unet"`
+- `--batch_size, default=1, help="batch size"`
+- `--num_gpu, default=1, help="number of gpus"`
 
 ## Train Model
 
